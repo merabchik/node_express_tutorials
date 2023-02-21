@@ -70,6 +70,24 @@ app.put('/app/:id', (req, res) => {
   });
 })
 
+app.delete('/app/:id', (req, res) => {
+  const vId = parseInt(req.params.id);
+  const result = apps.find((app) => {
+    return app.id === vId
+  });
+  const index = apps.indexOf(result);
+  apps.splice(index, 1);
+  res.json({
+    status: true,
+    message: 'განცხადება წაიშალა წარმატებით!',
+    result: result
+  });
+})
+
+app.get('/index', (req, res) => {
+  res.status(200).sendFile(__dirname + '/views/index.html');
+});
+
 app.listen(port, () => {
   console.log(`My app listening on port ${port}`)
 })
