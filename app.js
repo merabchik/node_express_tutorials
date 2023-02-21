@@ -5,6 +5,8 @@ const port = 3000
 
 app.use(bodyParser.json());
 
+// GIT-ის გამოყენება
+
 // let x = 10.6;
 // let name = "MerabC";
 // let status = true;
