@@ -45,7 +45,7 @@ app.get('/app/:id', (req, res) => {
   const result = apps.find((app) => {
     return app.id === vId
   });
-  res.json(result);
+  res.json([result]);
 })
 
 app.post('/app', (req, res) => {
