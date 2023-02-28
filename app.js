@@ -28,7 +28,7 @@ const statuses = [
   'active', 'inactive', 'pending', 'deleted'
 ];
 
-const apps = [
+let apps = [
   { id: 1, name: 'App 1' },
   { id: 2, name: 'App 2' },
   { id: 3, name: 'App 3' },
