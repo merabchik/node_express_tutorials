@@ -37,7 +37,7 @@ const apps = [
 ];
 
 app.get('/app', (req, res) => {
-  res.json(apps);
+  res.json([apps]);
 })
 
 app.get('/app/:id', (req, res) => {
